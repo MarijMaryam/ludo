@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    width: 600px; /* Max width for larger screens */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+canvas {
+    border: 2px solid #333;
+    background-color: #e0e0e0;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.controls button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #45a049;
+}
+
+#statusDisplay {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .controls button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #statusDisplay {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .controls button {
+        display: block;
+        width: calc(100% - 10px); /* Full width minus margin */
+        margin: 5px auto;
+    }
+}
